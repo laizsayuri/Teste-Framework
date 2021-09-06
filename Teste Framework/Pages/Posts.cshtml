@@ -1,0 +1,62 @@
+﻿@page
+@model PostsModel
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<table id="posts-table" class="table table-responsive">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Título</th>
+            <th scope="col">Conteúdo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</td>
+            <td>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</td>
+            <td>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</td>
+            <td>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</td>
+        </tr>
+    </tbody>
+</table>
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#posts-table').DataTable({
+                "language": {
+                    "emptyTable": "Não há dados disponíveis",
+                    "info": "Exibindo _START_ de _END_ de _TOTAL_ resultados",
+                    "lengthMenu": "Exibir _MENU_ resultados",
+                    "search": "Procurar:",
+                    "paginate": {
+                        "first": "Primeiro",
+                        "last": "Último",
+                        "next": "Próximo",
+                        "previous": "Anterior"
+                    },
+                    "aria": {
+                        "sortAscending": ": ative para ordenar a coluna de forma ascendente",
+                        "sortDescending": ": ative para ordenar a coluna de forma descendente"
+                    },
+                    "loadingRecords": "Carregando...",
+                    "processing": "Processando...",
+                    "infoEmpty": "Exibindo 0 de 0 de 0 resultados",
+                    "zeroRecords": "Sem resultados para essa busca",
+                }
+            });
+        });
+    </script>
+}
