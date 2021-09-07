@@ -1,8 +1,9 @@
 ﻿@page
-@model PostsModel
+@model ToDosModel
 @{
-    ViewData["Title"] = "Posts";
+    ViewData["Title"] = "ToDos";
 }
+
 
 <div class="mb-4">
     <table id="posts-table" class="table table-responsive">
@@ -10,24 +11,23 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Título</th>
-                <th scope="col">Conteúdo</th>
+                <th scope="col">Concluído</th>
             </tr>
         </thead>
         <tbody>
 
-            @foreach (var Post in Model.Posts)
+            @foreach (var ToDo in Model.ToDos)
             {
                 <tr>
-                    <th scope="row">@Post.Id</th>
-                    <td>@Post.Titulo</td>
-                    <td>@Post.Conteudo</td>
+                    <th scope="row">@ToDo.Id</th>
+                    <td>@ToDo.Titulo</td>
+                    <td>@ToDo.ConcluidoTexto</td>
                 </tr>
             }
 
         </tbody>
     </table>
 </div>
-
 
 @section Scripts{
     <script>
