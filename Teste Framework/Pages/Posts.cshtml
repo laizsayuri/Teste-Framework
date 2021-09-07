@@ -4,32 +4,29 @@
     ViewData["Title"] = "Posts";
 }
 
-<table id="posts-table" class="table table-responsive">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Título</th>
-            <th scope="col">Conteúdo</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</td>
-            <td>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</td>
-            <td>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</td>
-            <td>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</td>
-        </tr>
-    </tbody>
-</table>
+<div class="mb-4">
+    <table id="posts-table" class="table table-responsive">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Título</th>
+                <th scope="col">Conteúdo</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var Post in Model.Posts)
+            {
+                <tr>
+                    <th scope="row">@Post.Id</th>
+                    <td>@Post.Titulo</td>
+                    <td>@Post.Conteudo</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
 
 
 @section Scripts{
